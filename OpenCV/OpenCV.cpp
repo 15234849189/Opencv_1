@@ -3,10 +3,18 @@
 
 #include "pch.h"
 #include <iostream>
-
+#include <opencv2/opencv.hpp>
+using namespace cv;
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	Mat img(Size(10,14), CV_8UC1,Scalar(0,255,255));
+	imshow("原图",img);
+	waitKey(0);//
+    cout << "图片已经输出\n"; 
+	cout << img.type() << endl;
+
+	cout << img << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
